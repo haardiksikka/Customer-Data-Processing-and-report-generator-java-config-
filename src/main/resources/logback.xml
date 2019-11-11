@@ -1,0 +1,32 @@
+<configuration>
+ <property name="LOG_PATH" value="logs" />
+
+ <appender name="FileAppender" class="ch.qos.logback.core.rolling.RollingFileAppender">
+	<Append>true</Append>
+	<file>${LOG_PATH}/customerdata.log</file>
+    <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+      <!-- rollover daily -->
+      <fileNamePattern>${LOG_PATH}/cpa-%d{yyyy-MM-dd}.%i.log</fileNamePattern>
+      <timeBasedFileNamingAndTriggeringPolicy
+            class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+        <maxFileSize>100MB</maxFileSize>
+      </timeBasedFileNamingAndTriggeringPolicy>
+    </rollingPolicy>
+	<encoder>
+      <pattern><!--%d %5p [%t] %c  [Msisdn:%mdc{msisdn}|TransactionID:%mdc{transactionId}] --> - %m%n</pattern>
+    </encoder>
+ </appender>
+ 
+ 
+ <logger name="com.viva.CustomerProcessing" level="INFO" additivity="false">
+    <appender-ref ref="FileAppender"/>
+ </logger>
+ 
+ <logger name="com.viva.CustomerProcessing.processor" level="DEBUG" additivity="false">
+    <appender-ref ref="FileAppender"/>
+ </logger>
+  
+ 
+ 
+ <root level="ERROR"/>
+</configuration> 
