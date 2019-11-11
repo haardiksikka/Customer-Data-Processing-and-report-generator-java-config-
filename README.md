@@ -10,8 +10,13 @@ Projects Requirements
 Follow the below mentioned steps to execute the project:
 
 1).Update maven project to install all required dependencies.
+
 2).Create database customer_processing in your machine.
+
 3).Create table customer with fields first_name, middle_name, last_name, city, address, phone_number and created_on with phone_number as primary key.
+
 4).Create table fee_info with fields phone_number, fee_amount, fee_date (refer to schema.sql file).
+
 5).Update data source in application.properties.
+
 6).Change location for generating report file according to your preference in batch configuration.
