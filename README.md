@@ -4,7 +4,9 @@ Spring batch application for processing customer data and generating day wise re
 Projects Requirements
 
 -Database - Maria Db 10.3
+
 -jdk 1.8.0
+
 -IDE - eclipse/Spring tool suite(sts)
 
 Follow the below mentioned steps to execute the project:
