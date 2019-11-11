@@ -74,7 +74,7 @@ public class BatchConfiguration {
     @Bean
     public Step step1() {
         return stepBuilderFactory.get("step1")
-            .<Customer, Customer> chunk(10)            
+            .<Customer, Customer> chunk(50)            
             .reader(customerReader())
             .processor(customerProcessor())
             .writer(customerWriter())
@@ -84,7 +84,7 @@ public class BatchConfiguration {
     @Bean
     public Step step2() {
         return stepBuilderFactory.get("step2")
-            .<Customer, FeeInfo> chunk(10)            
+            .<Customer, FeeInfo> chunk(50)            
             .reader(customerReader())
             .processor(feeInfoProcessor())
             .writer(feeInfoWriter())
@@ -94,7 +94,7 @@ public class BatchConfiguration {
     @Bean
     public Step step3(ItemWriter<FeeInfo> databaseCsvItemWriter){
     	 return stepBuilderFactory.get("step3")
-                 .<FeeInfo, FeeInfo>chunk(10)
+                 .<FeeInfo, FeeInfo>chunk(50)
                  .reader(databaseCsvItemReader())
                  .writer(databaseCsvItemWriter)
                  .build();
