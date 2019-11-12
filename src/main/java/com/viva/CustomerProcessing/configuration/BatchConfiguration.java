@@ -48,7 +48,6 @@ import com.viva.CustomerProcessing.processor.FeeInfoProcessor;
 
 @Configuration
 @EnableBatchProcessing
-@AutoConfigureAfter
 public class BatchConfiguration {
 
 	@Autowired
@@ -176,7 +175,7 @@ public class BatchConfiguration {
     ItemWriter<FeeInfo> databaseCsvItemWriter(Environment environment) {
         FlatFileItemWriter<FeeInfo> csvFileWriter = new FlatFileItemWriter<>();
         String fileDate=new SimpleDateFormat("ddMMyyyyHHmmss'.csv'").format(new Date());
-        String exportFilePath = "C:\\Users\\comviva\\Desktop\\report"+fileDate;
+        String exportFilePath = "C:\\Users\\comviva\\Desktop"+fileDate;
         csvFileWriter.setResource(new FileSystemResource(exportFilePath));
         LineAggregator<FeeInfo> lineAggregator = createStudentLineAggregator();
         csvFileWriter.setLineAggregator(lineAggregator);

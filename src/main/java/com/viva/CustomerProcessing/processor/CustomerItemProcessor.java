@@ -12,17 +12,15 @@ import com.viva.CustomerProcessing.listener.JobListner;
 import com.viva.CustomerProcessing.logger.Slf4jLogger;
 
 public class CustomerItemProcessor implements ItemProcessor<Customer,Customer> {
-	//processing of data items
+	
 	@Autowired
 	public JobListner job;
 	
 	Set<Customer> fileData = new HashSet<Customer>();
-	//@Autowired
-	 Slf4jLogger logger = new Slf4jLogger(CustomerProcessingApplication.class);
+	Slf4jLogger logger = new Slf4jLogger(CustomerProcessingApplication.class);
+	
 	public Customer process(Customer customer) {
-	//	logger.info("-----------------Hello---------------------");
-		//use data stored in set 
-		
+	
 		if(job.dbRecords.contains(customer) || fileData.contains(customer)) {
 			logger.info("Customer with phone number "+customer.getPhoneNumber()+" ------->Registration Status : Failed.");
 			return null;
