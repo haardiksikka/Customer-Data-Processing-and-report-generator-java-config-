@@ -118,7 +118,7 @@ public class BatchConfiguration {
     	JdbcCursorItemReader<FeeInfo> databaseReader = new JdbcCursorItemReader<>();
 
     	databaseReader.setDataSource(dataSource);
-        databaseReader.setSql("select sum(fee_amount) 'fee_amount',created_on from fee_info group by created_on");
+        databaseReader.setSql("select sum(fee_amount) 'fee_amount',fee_date from fee_info group by fee_date");
         databaseReader.setRowMapper(new BeanPropertyRowMapper<>(FeeInfo.class));
 
    
@@ -131,7 +131,7 @@ public class BatchConfiguration {
             .name("feeItemReader")
             .resource(new ClassPathResource("customerdata.csv"))
             .delimited()
-            .names(new String[]{"phoneNumber","feeAmount","createdOn"})
+            .names(new String[]{"phoneNumber","feeAmount","feeDate"})
             .fieldSetMapper(new BeanWrapperFieldSetMapper<FeeInfo>() {{
                 setTargetType(FeeInfo.class);
             }})
@@ -161,7 +161,7 @@ public class BatchConfiguration {
     	try {
     		return new JdbcBatchItemWriterBuilder<FeeInfo>()
             .itemSqlParameterSourceProvider(new BeanPropertyItemSqlParameterSourceProvider<>())
-            .sql("INSERT INTO fee_info (phone_number,fee_amount,created_on) VALUES (:phoneNumber,:feeAmount,now())")
+            .sql("INSERT INTO fee_info (phone_number,fee_amount,fee_date) VALUES (:phoneNumber,:feeAmount,now())")
             .dataSource(dataSource)
             .build();
     	}
@@ -194,7 +194,7 @@ public class BatchConfiguration {
     
     private FieldExtractor<FeeInfo> createStudentFieldExtractor() {
         BeanWrapperFieldExtractor<FeeInfo> extractor = new BeanWrapperFieldExtractor<>();
-        extractor.setNames(new String[] {"feeAmount","createdOn"});
+        extractor.setNames(new String[] {"feeAmount","feeDate"});
         return extractor;
     }
     

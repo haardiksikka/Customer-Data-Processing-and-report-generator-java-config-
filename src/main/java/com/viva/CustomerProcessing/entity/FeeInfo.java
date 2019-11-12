@@ -6,17 +6,17 @@ public class FeeInfo {
 	private Double feeAmount;
 	
 	private String phoneNumber;
-	private Date createdOn;
+	private Date feeDate;
 	
 	public FeeInfo() {
          
 	}
 
-	public FeeInfo(Double feeAmount, String phoneNumber, Date createdOn) {
+	public FeeInfo(Double feeAmount, String phoneNumber, Date feeDate) {
 		super();
 		this.feeAmount = feeAmount;
 		this.phoneNumber = phoneNumber;
-		this.createdOn = createdOn;
+		this.feeDate = feeDate;
 	}
 
 	public Double getFeeAmount() {
@@ -36,11 +36,11 @@ public class FeeInfo {
 	}
 
 	public Date getCreatedOn() {
-		return createdOn;
+		return feeDate;
 	}
 
 	public void setCreatedOn(Date createdOn) {
-		this.createdOn = createdOn;
+		this.feeDate = createdOn;
 	}
 	
 	
