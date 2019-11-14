@@ -22,7 +22,7 @@ public class CustomerItemProcessor implements ItemProcessor<Customer,Customer> {
 	
 	public Customer process(Customer customer) {
 		List<Customer> dbRecords = listener.getDbRecords();
-		if(dbRecords.contains(customer) || fileData.contains(customer)) {
+		if(dbRecords.contains(customer) || fileData.contains(customer)||customer.getPhoneNumber().length()==0) {
 			logger.info("Customer with phone number "+customer.getPhoneNumber()+" ------->Registration Status : Failed.");
 			return null;
 		}

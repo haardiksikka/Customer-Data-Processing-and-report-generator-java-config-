@@ -168,7 +168,7 @@ public class BatchConfiguration {
     ItemWriter<FeeInfo> databaseCsvItemWriter(Environment environment) {
         FlatFileItemWriter<FeeInfo> csvFileWriter = new FlatFileItemWriter<>();
         String fileDate=new SimpleDateFormat("ddMMyyyyHHmmss'.csv'").format(new Date());
-        String exportFilePath = "C:\\Users\\comviva\\Desktop"+fileDate;
+        String exportFilePath = "C:\\Users\\comviva\\Desktop\\"+"report"+fileDate;
         csvFileWriter.setResource(new FileSystemResource(exportFilePath));
         LineAggregator<FeeInfo> lineAggregator = createCustomerLineAggregator();
         csvFileWriter.setLineAggregator(lineAggregator);

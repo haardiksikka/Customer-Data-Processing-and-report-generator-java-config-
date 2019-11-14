@@ -1,7 +1,9 @@
 package com.viva.customer_processing.processor;
 
 
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 import org.springframework.batch.item.ItemProcessor;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,21 +17,23 @@ public class FeeInfoProcessor implements ItemProcessor<Customer, FeeInfo> {
 	
 	@Autowired
 	public JobListner listener;
-	
+	Set<Customer> fileData = new HashSet<Customer>();
 	@Value("${customer.feeAmount}")
 	double feeAmount;
 	
 	
 	public FeeInfo process(Customer customer) {
 		List<Customer> dbRecords = listener.getDbRecords();
-		if(!dbRecords.contains(customer)) {
-		FeeInfo feeDetails = new FeeInfo();
-		feeDetails.setPhoneNumber(customer.getPhoneNumber());
-		feeDetails.setFeeAmount(feeAmount);
-		return feeDetails;
+		if(dbRecords.contains(customer) || fileData.contains(customer)) {
+		
+		return null;
 		}
 		else {
-			return null;
+			FeeInfo feeDetails = new FeeInfo();
+			feeDetails.setPhoneNumber(customer.getPhoneNumber());
+			feeDetails.setFeeAmount(feeAmount);
+			return feeDetails;
+			
 		}
 	}
 
