@@ -25,8 +25,19 @@ public class FeeInfoProcessor implements ItemProcessor<Customer, FeeInfo> {
 	public FeeInfo process(Customer customer) {
 		List<Customer> dbRecords = listener.getDbRecords();
 		if(dbRecords.contains(customer) || fileData.contains(customer)) {
-		
-		return null;
+			return null;
+		}
+		else if(customer.getFirstName().length()==0) {
+			
+			return null;
+		}
+		else if(customer.getAddress().length()==0) {
+			//logger.info("Customer with phone number "+customer.getAddress()+" ------->Registration Failed -->Address field is empty.");
+			return null;
+		}
+		else if(customer.getCity().length()==0) {
+			//logger.info("Customer with phone number "+customer.getCity()+" ------->Registration Failed -->City field is empty.");
+			return null;
 		}
 		else {
 			FeeInfo feeDetails = new FeeInfo();

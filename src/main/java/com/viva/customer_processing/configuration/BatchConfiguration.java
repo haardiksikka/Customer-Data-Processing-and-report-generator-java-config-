@@ -2,6 +2,7 @@ package com.viva.customer_processing.configuration;
 
 
 
+import java.io.File;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -58,20 +59,20 @@ public class BatchConfiguration {
      
     
     @Bean
-    public Job importUserJob(@Qualifier("step3")  Step step3,JobListner listener) {
+    public Job importUserJob(@Qualifier("reportGeneratorStep")  Step reportGeneratorStep,JobListner listener) {
         return jobBuilderFactory.get("importUserJob")
         	.incrementer(new RunIdIncrementer())
         	.listener(listener)
-        	.flow(step1())
-        	.next(step2())
-        	.next(step3)
+        	.flow(customerStep())
+        	.next(feeInfoStep())
+        	.next(reportGeneratorStep)
             .end()
             .build();
     }
 
     @Bean
-    public Step step1() {
-        return stepBuilderFactory.get("step1")
+    public Step customerStep() {
+        return stepBuilderFactory.get("customerStep")
             .<Customer, Customer> chunk(50)            
             .reader(customerReader())
             .processor(customerProcessor())
@@ -80,8 +81,8 @@ public class BatchConfiguration {
     }
     
     @Bean
-    public Step step2() {
-        return stepBuilderFactory.get("step2")
+    public Step feeInfoStep() {
+        return stepBuilderFactory.get("feeInfoStep")
             .<Customer, FeeInfo> chunk(50)            
             .reader(customerReader())
             .processor(feeInfoProcessor())
@@ -90,8 +91,8 @@ public class BatchConfiguration {
     }
     
     @Bean
-    public Step step3(ItemWriter<FeeInfo> databaseCsvItemWriter){
-    	 return stepBuilderFactory.get("step3")
+    public Step reportGeneratorStep(ItemWriter<FeeInfo> databaseCsvItemWriter){
+    	 return stepBuilderFactory.get("reportGeneratorStep")
                  .<FeeInfo, FeeInfo>chunk(50)
                  .reader(databaseCsvItemReader())
                  .writer(databaseCsvItemWriter)
@@ -163,12 +164,13 @@ public class BatchConfiguration {
             .build();
     }
     
-    
+ //"C:\\Users\\comviva\\Desktop\\"+"report"+fileDate;   
     @Bean
     ItemWriter<FeeInfo> databaseCsvItemWriter(Environment environment) {
         FlatFileItemWriter<FeeInfo> csvFileWriter = new FlatFileItemWriter<>();
         String fileDate=new SimpleDateFormat("ddMMyyyyHHmmss'.csv'").format(new Date());
-        String exportFilePath = "C:\\Users\\comviva\\Desktop\\"+"report"+fileDate;
+        String exportFilePath = "reports\\"+"report"+fileDate;
+       // File file = new File("report/report"+.csv");
         csvFileWriter.setResource(new FileSystemResource(exportFilePath));
         LineAggregator<FeeInfo> lineAggregator = createCustomerLineAggregator();
         csvFileWriter.setLineAggregator(lineAggregator);

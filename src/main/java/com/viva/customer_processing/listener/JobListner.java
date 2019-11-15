@@ -13,7 +13,9 @@ import org.springframework.batch.core.listener.JobExecutionListenerSupport;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import com.viva.customer_processing.CustomerProcessingApplication;
 import com.viva.customer_processing.entity.Customer;
+import com.viva.customer_processing.logger.Slf4jLogger;
 
 import org.springframework.jdbc.core.JdbcTemplate;
 
@@ -25,7 +27,7 @@ public class JobListner extends JobExecutionListenerSupport {
 	@Autowired DataSource dataSource;
 	
 	private static List<Customer> dbRecords;
-	
+	Slf4jLogger logger = new Slf4jLogger(CustomerProcessingApplication.class);
 	@Autowired
 	public JobListner(JdbcTemplate jdbcTemplate) {
 		this.jdbcTemplate = jdbcTemplate;
@@ -47,7 +49,12 @@ public class JobListner extends JobExecutionListenerSupport {
 					)).forEach(customer -> dbRecords.add(customer));
 		
 	}
+	@Override
+	public void afterJob(JobExecution jobExecution) {
+		logger.info("Job Execution Completed");
+	}
 	public List<Customer> getDbRecords(){
 		return dbRecords;
 	}
+	
 }

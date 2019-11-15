@@ -49,10 +49,28 @@ class CustomerProcessingApplicationTests {
 	
 	
 	@Test
-	void contextLoads() throws Exception {		
+	void job_test() throws Exception {		
 				JobExecution jobExecution;			
 				jobExecution = jobLauncherTestUtils.launchJob();
 		        Assert.assertEquals(BatchStatus.COMPLETED.toString(), jobExecution.getStatus().toString());		
 	}
+	
+//	@Test
+//	void test_customer_step() {
+//		JobExecution jobExecution = jobLauncherTestUtils.launchStep("customerStep");
+//		Assert.assertEquals("COMPLETED", jobExecution.getExitStatus().getExitCode().toString());
+//	}
+//	@Test
+//	void test_fee_info_step() {
+//		JobExecution jobExecution = jobLauncherTestUtils.launchStep("feeInfoStep");
+//		Assert.assertEquals("COMPLETED", jobExecution.getExitStatus().getExitCode().toString());
+//	}
+//	
+//	@Test
+//	void test_report_generator_step() {
+//		JobExecution jobExecution = jobLauncherTestUtils.launchStep("reportGeneratorStep");
+//		Assert.assertEquals("COMPLETED", jobExecution.getExitStatus().getExitCode().toString());
+//	}
+	
 
 }
