@@ -27,6 +27,9 @@ public class FeeInfoProcessor implements ItemProcessor<Customer, FeeInfo> {
 		if(dbRecords.contains(customer) || fileData.contains(customer)) {
 			return null;
 		}
+		else if(customer.getPhoneNumber().length()==0) {
+			return null;
+		}
 		else if(customer.getFirstName().length()==0) {
 			
 			return null;

@@ -22,8 +22,12 @@ public class CustomerItemProcessor implements ItemProcessor<Customer,Customer> {
 	
 	public Customer process(Customer customer) {
 		List<Customer> dbRecords = listener.getDbRecords();
-		if(dbRecords.contains(customer) || fileData.contains(customer)||customer.getPhoneNumber().length()==0) {
-			logger.info("Customer with phone number "+customer.getPhoneNumber()+" ------->Registration Failed -->Duplicate phone number");		
+		if(dbRecords.contains(customer) || fileData.contains(customer)) {
+			logger.error("Customer with phone number "+customer.getPhoneNumber()+" ------->Registration Failed -->Duplicate phone number");		
+			return null;
+		}
+		else if(customer.getPhoneNumber().length()==0) {
+			logger.error("Customer with phone number "+customer.getPhoneNumber()+" ------->Registration Failed -->Phone number field is empty.");
 			return null;
 		}
 		else if(customer.getFirstName().length()==0) {

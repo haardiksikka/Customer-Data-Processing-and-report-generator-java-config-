@@ -26,8 +26,8 @@ public class Slf4jLogger {
 	public void info(final String statement) {
 		logger.info(statement);
 	}
-//	public void error(final String statement) {
-//		logger.error(statement);
-//	}
+	public void error(final String statement) {
+		logger.error(statement);
+	}
 
 }
