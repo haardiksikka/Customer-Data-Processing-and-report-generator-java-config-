@@ -1,4 +1,4 @@
-package com.viva.CustomerProcessing.logger;
+package com.viva.customer_processing.logger;
 
 import java.lang.reflect.Method;
 import java.net.URL;

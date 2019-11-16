@@ -1,4 +1,4 @@
-package com.viva.CustomerProcessing;
+package com.viva.customer_processing;
 
 
 
@@ -22,10 +22,12 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.junit4.SpringRunner;
+
+import com.viva.customer_processing.CustomerProcessingApplication;
+import com.viva.customer_processing.configuration.BatchConfiguration;
+
 import org.springframework.batch.test.JobLauncherTestUtils;
 import org.springframework.batch.test.context.SpringBatchTest;
-
-import com.viva.CustomerProcessing.configuration.BatchConfiguration;
 
 import junit.framework.Assert;
 
@@ -50,11 +52,7 @@ class CustomerProcessingApplicationTests {
 	void contextLoads() throws Exception {
 		System.out.println("sknckldsc");
 			
-			JobExecution jobExecution;
-			Job j = jobLauncherTestUtils.getJob();
-			//System.out.println(j);
-			
-			
+			JobExecution jobExecution;			
 				jobExecution = jobLauncherTestUtils.launchJob();
 		        Assert.assertEquals(BatchStatus.COMPLETED.toString(), jobExecution.getStatus().toString());
 		

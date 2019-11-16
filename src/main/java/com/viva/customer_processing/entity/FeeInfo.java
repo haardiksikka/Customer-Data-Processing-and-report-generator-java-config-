@@ -1,4 +1,4 @@
-package com.viva.CustomerProcessing.entity;
+package com.viva.customer_processing.entity;
 
 import java.util.Date;
 

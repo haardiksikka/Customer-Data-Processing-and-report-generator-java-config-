@@ -1,4 +1,4 @@
-package com.viva.CustomerProcessing.configuration;
+package com.viva.customer_processing.configuration;
 
 
 
@@ -38,12 +38,11 @@ import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.FileSystemResource;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 
-
-import com.viva.CustomerProcessing.entity.Customer;
-import com.viva.CustomerProcessing.entity.FeeInfo;
-import com.viva.CustomerProcessing.listener.JobListner;
-import com.viva.CustomerProcessing.processor.CustomerItemProcessor;
-import com.viva.CustomerProcessing.processor.FeeInfoProcessor;
+import com.viva.customer_processing.entity.Customer;
+import com.viva.customer_processing.entity.FeeInfo;
+import com.viva.customer_processing.listener.JobListner;
+import com.viva.customer_processing.processor.CustomerItemProcessor;
+import com.viva.customer_processing.processor.FeeInfoProcessor;
 
 
 @Configuration
@@ -156,7 +155,7 @@ public class BatchConfiguration {
 }    
     @Bean
     public JdbcBatchItemWriter<FeeInfo> feeInfoWriter() {
-    	
+    
     		return new JdbcBatchItemWriterBuilder<FeeInfo>()
             .itemSqlParameterSourceProvider(new BeanPropertyItemSqlParameterSourceProvider<>())
             .sql("INSERT INTO fee_info (phone_number,fee_amount,fee_date) VALUES (:phoneNumber,:feeAmount,now())")

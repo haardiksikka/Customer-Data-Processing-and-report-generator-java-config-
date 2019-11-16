@@ -1,4 +1,4 @@
-package com.viva.CustomerProcessing.listener;
+package com.viva.customer_processing.listener;
 
 
 import java.util.ArrayList;
@@ -12,9 +12,10 @@ import org.springframework.batch.core.JobExecution;
 import org.springframework.batch.core.listener.JobExecutionListenerSupport;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-import org.springframework.jdbc.core.JdbcTemplate;
 
-import com.viva.CustomerProcessing.entity.Customer;
+import com.viva.customer_processing.entity.Customer;
+
+import org.springframework.jdbc.core.JdbcTemplate;
 
 
 @Component
@@ -22,9 +23,8 @@ public class JobListner extends JobExecutionListenerSupport {
 	@Autowired
 	private final JdbcTemplate jdbcTemplate;
 	@Autowired DataSource dataSource;
-//	private static final Logger log = LoggerFactory.getLogger(JobListner.class);
 	
-	public List<Customer> dbRecords;
+	private static List<Customer> dbRecords;
 	
 	@Autowired
 	public JobListner(JdbcTemplate jdbcTemplate) {
@@ -33,9 +33,9 @@ public class JobListner extends JobExecutionListenerSupport {
 	}
 	@Override
 	public void beforeJob(JobExecution jobExecution) {
-		// TODO Auto-generated method stub
+		
 		this.jdbcTemplate.setDataSource(dataSource);
-	//	List<Customer> success = new ArrayList<Customer>();
+	
 		jdbcTemplate.query("SELECT first_name, middle_name,last_name,address, city, phone_number FROM customer",
 				(rs, row) -> new Customer(
 					rs.getString(1),
@@ -46,5 +46,8 @@ public class JobListner extends JobExecutionListenerSupport {
 					rs.getString(4)
 					)).forEach(customer -> dbRecords.add(customer));
 		
+	}
+	public List<Customer> getDbRecords(){
+		return dbRecords;
 	}
 }

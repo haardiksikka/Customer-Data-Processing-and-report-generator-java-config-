@@ -1,4 +1,4 @@
-package com.viva.CustomerProcessing.entity;
+package com.viva.customer_processing.entity;
 
 import java.sql.Date;
 import java.util.Objects;
@@ -71,10 +71,7 @@ public class Customer{
 	public void setCity(String city) {
 		this.city = city;
 	}
-//	@Override
-//    public int compareTo(Customer o) {
-//        return this.getPhoneNumber().compareTo(o.getPhoneNumber());
-//    }
+
 		
 	
 	@Override
@@ -84,9 +81,9 @@ public class Customer{
 	
 	@Override
 	public boolean equals(Object obj) {
-		// TODO Auto-generated method stub
+	
 		if(this == obj) return true;
-		else if(obj instanceof Customer){ // implicit null check
+		else if(obj instanceof Customer){ 
 	        Customer other = (Customer) obj;
 	        return Objects.equals(this.phoneNumber, other.phoneNumber);
 	    }
