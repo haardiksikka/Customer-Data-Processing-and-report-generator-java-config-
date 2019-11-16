@@ -119,9 +119,7 @@ public class BatchConfiguration {
 
     	databaseReader.setDataSource(dataSource);
         databaseReader.setSql("select sum(fee_amount) 'fee_amount',fee_date from fee_info group by fee_date");
-        databaseReader.setRowMapper(new BeanPropertyRowMapper<>(FeeInfo.class));
-
-   
+        databaseReader.setRowMapper(new BeanPropertyRowMapper<>(FeeInfo.class));   
         return databaseReader;
     }
     
@@ -158,16 +156,12 @@ public class BatchConfiguration {
 }    
     @Bean
     public JdbcBatchItemWriter<FeeInfo> feeInfoWriter() {
-    	try {
+    	
     		return new JdbcBatchItemWriterBuilder<FeeInfo>()
             .itemSqlParameterSourceProvider(new BeanPropertyItemSqlParameterSourceProvider<>())
             .sql("INSERT INTO fee_info (phone_number,fee_amount,fee_date) VALUES (:phoneNumber,:feeAmount,now())")
             .dataSource(dataSource)
             .build();
-    	}
-    	catch(Exception e) {
-    		return null;
-    	}
     }
     
     
@@ -177,22 +171,22 @@ public class BatchConfiguration {
         String fileDate=new SimpleDateFormat("ddMMyyyyHHmmss'.csv'").format(new Date());
         String exportFilePath = "C:\\Users\\comviva\\Desktop"+fileDate;
         csvFileWriter.setResource(new FileSystemResource(exportFilePath));
-        LineAggregator<FeeInfo> lineAggregator = createStudentLineAggregator();
+        LineAggregator<FeeInfo> lineAggregator = createCustomerLineAggregator();
         csvFileWriter.setLineAggregator(lineAggregator);
 
         return csvFileWriter;
     }
-    private LineAggregator<FeeInfo> createStudentLineAggregator() {
+    private LineAggregator<FeeInfo> createCustomerLineAggregator() {
         DelimitedLineAggregator<FeeInfo> lineAggregator = new DelimitedLineAggregator<>();
         lineAggregator.setDelimiter(",");
 
-        FieldExtractor<FeeInfo> fieldExtractor = createStudentFieldExtractor();
+        FieldExtractor<FeeInfo> fieldExtractor = createCustomerFieldExtractor();
         lineAggregator.setFieldExtractor(fieldExtractor);
 
         return lineAggregator;
     }
     
-    private FieldExtractor<FeeInfo> createStudentFieldExtractor() {
+    private FieldExtractor<FeeInfo> createCustomerFieldExtractor() {
         BeanWrapperFieldExtractor<FeeInfo> extractor = new BeanWrapperFieldExtractor<>();
         extractor.setNames(new String[] {"feeAmount","feeDate"});
         return extractor;

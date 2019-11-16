@@ -1,5 +1,6 @@
 package com.viva.CustomerProcessing.processor;
 
+
 import org.springframework.batch.item.ItemProcessor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -16,6 +17,7 @@ public class FeeInfoProcessor implements ItemProcessor<Customer, FeeInfo> {
 	@Value("${customer.feeAmount}")
 	double feeAmount;
 	
+	
 	public FeeInfo process(Customer customer) {
 		if(!job.dbRecords.contains(customer)) {
 		FeeInfo feeDetails = new FeeInfo();
@@ -29,3 +31,4 @@ public class FeeInfoProcessor implements ItemProcessor<Customer, FeeInfo> {
 	}
 
 }
+

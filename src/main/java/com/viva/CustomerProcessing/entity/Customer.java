@@ -76,12 +76,7 @@ public class Customer{
 //        return this.getPhoneNumber().compareTo(o.getPhoneNumber());
 //    }
 		
-	@Override
-	public String toString() {
-		return "Customer [firstName=" + firstName + ", middleName=" + middleName + ", lastName=" + lastName
-				+ ", phoneNumber=" + phoneNumber + ", address=" + address + ", city=" + city
-				+"]";
-	}
+	
 	@Override
 	public int hashCode(){
 	    return Objects.hash(phoneNumber);
