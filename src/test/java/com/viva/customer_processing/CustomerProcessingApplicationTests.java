@@ -32,8 +32,9 @@ import org.springframework.batch.test.context.SpringBatchTest;
 import junit.framework.Assert;
 
 @SpringBatchTest
+@RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(classes=CustomerProcessingApplication.class)
-@SpringBootTest
+@SpringBootTest(classes=CustomerProcessingApplication.class)
 class CustomerProcessingApplicationTests {
 	
 	@Autowired
