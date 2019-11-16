@@ -32,7 +32,6 @@ import org.springframework.batch.test.context.SpringBatchTest;
 import junit.framework.Assert;
 
 @SpringBatchTest
-@RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(classes=CustomerProcessingApplication.class)
 @SpringBootTest
 class CustomerProcessingApplicationTests {
@@ -49,13 +48,10 @@ class CustomerProcessingApplicationTests {
 	
 	
 	@Test
-	void contextLoads() throws Exception {
-		System.out.println("sknckldsc");
-			
-			JobExecution jobExecution;			
+	void contextLoads() throws Exception {		
+				JobExecution jobExecution;			
 				jobExecution = jobLauncherTestUtils.launchJob();
-		        Assert.assertEquals(BatchStatus.COMPLETED.toString(), jobExecution.getStatus().toString());
-		
+		        Assert.assertEquals(BatchStatus.COMPLETED.toString(), jobExecution.getStatus().toString());		
 	}
 
 }
