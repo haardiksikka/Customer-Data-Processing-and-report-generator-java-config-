@@ -4,8 +4,9 @@ package com.viva.customer_processing.configuration;
 
 import java.io.File;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
-
+import java.util.List;
 
 import javax.sql.DataSource;
 
@@ -14,6 +15,7 @@ import org.springframework.batch.core.Step;
 import org.springframework.batch.core.configuration.annotation.EnableBatchProcessing;
 import org.springframework.batch.core.configuration.annotation.JobBuilderFactory;
 import org.springframework.batch.core.configuration.annotation.StepBuilderFactory;
+import org.springframework.batch.core.configuration.annotation.StepScope;
 import org.springframework.batch.core.launch.support.RunIdIncrementer;
 import org.springframework.batch.item.ItemReader;
 import org.springframework.batch.item.ItemWriter;
@@ -29,6 +31,7 @@ import org.springframework.batch.item.file.transform.BeanWrapperFieldExtractor;
 import org.springframework.batch.item.file.transform.DelimitedLineAggregator;
 import org.springframework.batch.item.file.transform.FieldExtractor;
 import org.springframework.batch.item.file.transform.LineAggregator;
+import org.springframework.batch.item.support.CompositeItemWriter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.autoconfigure.AutoConfigureAfter;
@@ -43,6 +46,8 @@ import com.viva.customer_processing.entity.Customer;
 import com.viva.customer_processing.entity.FeeInfo;
 import com.viva.customer_processing.listener.JobListner;
 import com.viva.customer_processing.processor.CustomerItemProcessor;
+import com.viva.customer_processing.processor.DeleteCustomerProcessor;
+import com.viva.customer_processing.processor.DeleteFeeInfoProcessor;
 import com.viva.customer_processing.processor.FeeInfoProcessor;
 
 
@@ -98,6 +103,34 @@ public class BatchConfiguration {
                  .writer(databaseCsvItemWriter)
                  .build();
     }
+    @Bean
+	public Job job2() {
+		return this.jobBuilderFactory.get("job2")
+				.incrementer(new RunIdIncrementer())
+				.flow(deactivateCustomer())
+	        	.next(deleteFeeInfo())
+	        	.end()
+	        	.build();
+	}
+    
+    @Bean
+    public Step deactivateCustomer() {
+    	return stepBuilderFactory.get("deactivateCustomer")
+                .<Customer, Customer> chunk(50)            
+                .reader(deactivateCustomerReader())
+                .processor(deleteCustomerProcessor())
+                .writer(deleteCustomer())
+                .build();
+    }
+    @Bean
+    public Step deleteFeeInfo() {
+    	return stepBuilderFactory.get("deleteFeeInfo")
+                .<Customer, FeeInfo> chunk(50)            
+                .reader(deactivateCustomerReader())
+                .processor(deleteFeeInfoProcessor())
+                .writer(deleteFeeRecord())
+                .build();
+    }
     
     @Bean
     public FlatFileItemReader<Customer> customerReader() {
@@ -109,6 +142,32 @@ public class BatchConfiguration {
             .names(new String[]{"firstName","middleName", "lastName","address","city","phoneNumber"})
             .fieldSetMapper(new BeanWrapperFieldSetMapper<Customer>() {{
                 setTargetType(Customer.class);
+            }})
+            .build();
+    }
+    @Bean
+    public FlatFileItemReader<Customer> deactivateCustomerReader() {
+    	
+        return new FlatFileItemReaderBuilder<Customer>()
+            .name("customerItemReader")          
+            .resource(new ClassPathResource("deletecustomer.csv"))
+            .delimited()
+            .names(new String[]{"firstName","middleName", "lastName","address","city","phoneNumber"})
+            .fieldSetMapper(new BeanWrapperFieldSetMapper<Customer>() {{
+                setTargetType(Customer.class);
+            }})
+            .build();
+    }
+    
+    @Bean
+    public FlatFileItemReader<FeeInfo> deactivateFeeInfoReader() {
+        return new FlatFileItemReaderBuilder<FeeInfo>()
+            .name("feeItemReader")
+            .resource(new ClassPathResource("deletecustomer.csv"))
+            .delimited()
+            .names(new String[]{"phoneNumber","feeAmount","feeDate"})
+            .fieldSetMapper(new BeanWrapperFieldSetMapper<FeeInfo>() {{
+                setTargetType(FeeInfo.class);
             }})
             .build();
     }
@@ -141,6 +200,15 @@ public class BatchConfiguration {
         return new CustomerItemProcessor();
     }
     
+    @Bean
+    public DeleteCustomerProcessor deleteCustomerProcessor() {
+        return new DeleteCustomerProcessor();
+    }
+    @Bean
+    public DeleteFeeInfoProcessor deleteFeeInfoProcessor() {
+        return new DeleteFeeInfoProcessor();
+    }
+    
     @Bean FeeInfoProcessor feeInfoProcessor() {
     	return new FeeInfoProcessor();
     }
@@ -154,6 +222,27 @@ public class BatchConfiguration {
       jdbcBatchItemWriter.setItemSqlParameterSourceProvider(new BeanPropertyItemSqlParameterSourceProvider<Customer>());
       return jdbcBatchItemWriter;
 }    
+    @Bean
+    public JdbcBatchItemWriter<Customer> deleteCustomer() {  	
+      JdbcBatchItemWriter<Customer> jdbcBatchItemWriter = new JdbcBatchItemWriter<>();
+      jdbcBatchItemWriter.setAssertUpdates(true);      
+      jdbcBatchItemWriter.setDataSource(dataSource);     
+      jdbcBatchItemWriter.setSql("DELETE FROM customer where phone_number like :phoneNumber");     
+      jdbcBatchItemWriter.setItemSqlParameterSourceProvider(new BeanPropertyItemSqlParameterSourceProvider<Customer>());
+      return jdbcBatchItemWriter;
+}
+    @Bean
+    public JdbcBatchItemWriter<FeeInfo> deleteFeeRecord() {  	
+      JdbcBatchItemWriter<FeeInfo> jdbcBatchItemWriter = new JdbcBatchItemWriter<>();
+      jdbcBatchItemWriter.setAssertUpdates(true);      
+      jdbcBatchItemWriter.setDataSource(dataSource);     
+      jdbcBatchItemWriter.setSql("DELETE FROM fee_info where phone_number like :phoneNumber");     
+      jdbcBatchItemWriter.setItemSqlParameterSourceProvider(new BeanPropertyItemSqlParameterSourceProvider<FeeInfo>());
+      return jdbcBatchItemWriter;
+}
+    
+  
+
     @Bean
     public JdbcBatchItemWriter<FeeInfo> feeInfoWriter() {
     
