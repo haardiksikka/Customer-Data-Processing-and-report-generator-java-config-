@@ -37,9 +37,12 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.autoconfigure.AutoConfigureAfter;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Primary;
 import org.springframework.core.env.Environment;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.FileSystemResource;
+import org.springframework.core.task.SimpleAsyncTaskExecutor;
+import org.springframework.core.task.TaskExecutor;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 
 import com.viva.customer_processing.entity.Customer;
@@ -64,34 +67,40 @@ public class BatchConfiguration {
      
     
     @Bean
-    public Job importUserJob(@Qualifier("reportGeneratorStep")  Step reportGeneratorStep,JobListner listener) {
+    @Qualifier("importUserJob")
+    @Primary
+    public Job importUserJob(@Qualifier("reportGeneratorStep")  Step reportGeneratorStep,JobListner listener,TaskExecutor taskExecutor) {
         return jobBuilderFactory.get("importUserJob")
         	.incrementer(new RunIdIncrementer())
         	.listener(listener)
-        	.flow(customerStep())
-        	.next(feeInfoStep())
+        	.flow(customerStep(taskExecutor))
+        	.next(feeInfoStep(taskExecutor))
         	.next(reportGeneratorStep)
             .end()
             .build();
     }
 
     @Bean
-    public Step customerStep() {
+    public Step customerStep(TaskExecutor taskExecutor) {
         return stepBuilderFactory.get("customerStep")
             .<Customer, Customer> chunk(50)            
             .reader(customerReader())
             .processor(customerProcessor())
             .writer(customerWriter())
+            .taskExecutor(taskExecutor)
+            .throttleLimit(10)
             .build();
     }
     
     @Bean
-    public Step feeInfoStep() {
+    public Step feeInfoStep(TaskExecutor taskExecutor) {
         return stepBuilderFactory.get("feeInfoStep")
             .<Customer, FeeInfo> chunk(50)            
             .reader(customerReader())
             .processor(feeInfoProcessor())
             .writer(feeInfoWriter())
+            .taskExecutor(taskExecutor)
+            .throttleLimit(10)
             .build();
     }
     
@@ -104,33 +113,40 @@ public class BatchConfiguration {
                  .build();
     }
     @Bean
-	public Job job2() {
-		return this.jobBuilderFactory.get("job2")
-				.incrementer(new RunIdIncrementer())
-				.flow(deactivateCustomer())
-	        	.next(deleteFeeInfo())
-	        	.end()
-	        	.build();
-	}
+    public TaskExecutor taskExecutor(){
+        return new SimpleAsyncTaskExecutor("spring_batch");
+    }
+
     
-    @Bean
-    public Step deactivateCustomer() {
-    	return stepBuilderFactory.get("deactivateCustomer")
-                .<Customer, Customer> chunk(50)            
-                .reader(deactivateCustomerReader())
-                .processor(deleteCustomerProcessor())
-                .writer(deleteCustomer())
-                .build();
-    }
-    @Bean
-    public Step deleteFeeInfo() {
-    	return stepBuilderFactory.get("deleteFeeInfo")
-                .<Customer, FeeInfo> chunk(50)            
-                .reader(deactivateCustomerReader())
-                .processor(deleteFeeInfoProcessor())
-                .writer(deleteFeeRecord())
-                .build();
-    }
+//    @Bean
+//	public Job deactivateSim() {
+//		return this.jobBuilderFactory.get("deactivateSim")
+//				.incrementer(new RunIdIncrementer())
+//				.flow(deactivateCustomer())
+//	        	.next(deleteFeeInfo())
+//	        	.end()
+//	        	.build();
+//	}
+    
+//    @Bean
+//    @Qualifier(value="deactivateCustomer")
+//    public Step deactivateCustomer() {
+//    	return stepBuilderFactory.get("deactivateCustomer")
+//                .<Customer, Customer> chunk(50)            
+//                .reader(deactivateCustomerReader())
+//                .processor(deleteCustomerProcessor())
+//                .writer(deleteCustomer())
+//                .build();
+//    }
+//    @Bean
+//    public Step deleteFeeInfo() {
+//    	return stepBuilderFactory.get("deleteFeeInfo")
+//                .<Customer, FeeInfo> chunk(50)            
+//                .reader(deactivateCustomerReader())
+//                .processor(deleteFeeInfoProcessor())
+//                .writer(deleteFeeRecord())
+//                .build();
+//    }
     
     @Bean
     public FlatFileItemReader<Customer> customerReader() {
