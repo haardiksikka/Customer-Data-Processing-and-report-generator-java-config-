@@ -12,6 +12,7 @@ import org.springframework.beans.factory.annotation.Value;
 import com.viva.customer_processing.entity.Customer;
 import com.viva.customer_processing.entity.FeeInfo;
 import com.viva.customer_processing.listener.JobListner;
+import com.viva.customer_processing.utils.MobileNumberValidator;
 
 public class FeeInfoProcessor implements ItemProcessor<Customer, FeeInfo> {
 	
@@ -25,6 +26,9 @@ public class FeeInfoProcessor implements ItemProcessor<Customer, FeeInfo> {
 	public FeeInfo process(Customer customer) {
 		Set<Customer> dbRecords = listener.getDbRecords();
 		if(dbRecords.contains(customer) || fileData.contains(customer)) {
+			return null;
+		}
+		else if(!MobileNumberValidator.isValid(customer.getPhoneNumber())) {
 			return null;
 		}
 		else if(customer.getPhoneNumber().length()==0) {

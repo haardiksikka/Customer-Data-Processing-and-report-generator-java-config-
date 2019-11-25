@@ -66,3 +66,139 @@
 - Customer with phone number  ------->Registration Failed -->Phone number field is empty.
 - Customer with phone number 80974 ------->Registration Failed -->Duplicate phone number
 - Job Execution Completed
+- Starting CustomerProcessingApplication on MCKD-TRNG60-46 with PID 15556 (D:\customer\Customer-Data-Processing-and-report-generator-java-config-\target\classes started by comviva in D:\customer\Customer-Data-Processing-and-report-generator-java-config-)
+- No active profile set, falling back to default profiles: default
+- Started CustomerProcessingApplication in 1.791 seconds (JVM running for 2.338)
+- Customer with phone number 80970 ------->Registration Failed -->Duplicate phone number
+- Customer with phone number 80990 ------->Registration Failed -->Duplicate phone number
+- Customer with phone number 80992 ------->Registration Failed -->Duplicate phone number
+- Customer with phone number 80994 ------->Registration Failed -->Duplicate phone number
+- Customer with phone number 909991 ------->Registration Failed -->Duplicate phone number
+- Customer with phone number 80971 ------->Registration Failed : Invalid Phone number field.
+- Customer with phone number 80979 ------->Registration Failed -->Duplicate phone number
+- Customer with phone number 80981 ------->Registration Failed -->Duplicate phone number
+- Customer with phone number 80983 ------->Registration Failed -->Duplicate phone number
+- Customer with phone number 80985 ------->Registration Failed -->Duplicate phone number
+- Customer with phone number 80987 ------->Registration Failed -->Duplicate phone number
+- Customer with phone number 80989 ------->Registration Failed -->Duplicate phone number
+- Customer with phone number 80972 ------->Registration Failed -->Duplicate phone number
+- Customer with phone number 80978 ------->Registration Failed -->Duplicate phone number
+- Customer with phone number 80969 ------->Registration Failed : Invalid Phone number field.
+- Customer with phone number kkk ------->Registration Failed : Invalid Phone number field.
+- Customer with phone number 80977 ------->Registration Failed -->Duplicate phone number
+- Customer with phone number 80980 ------->Registration Failed -->Duplicate phone number
+- Customer with phone number 80982 ------->Registration Failed -->Duplicate phone number
+- Customer with phone number 80984 ------->Registration Failed -->Duplicate phone number
+- Customer with phone number 80986 ------->Registration Failed -->Duplicate phone number
+- Customer with phone number 80988 ------->Registration Failed -->Duplicate phone number
+- Customer with phone number 909951 ------->Registration Failed -->Duplicate phone number
+- Customer with phone number 80974 ------->Registration Failed -->Duplicate phone number
+- Customer with phone number  ------->Registration Failed : Invalid Phone number field.
+- Customer with phone number 80991 ------->Registration Failed -->Duplicate phone number
+- Customer with phone number 80993 ------->Registration Failed -->Duplicate phone number
+- Customer with phone number 80976 ------->Registration Failed -->Duplicate phone number
+- Customer with phone number 80975 ------->Registration Failed -->Duplicate phone number
+- Customer with phone number 80973 ------->Registration Failed : Invalid Phone number field.
+- Job Execution Completed
+- Starting CustomerProcessingApplication on MCKD-TRNG60-46 with PID 3756 (D:\customer\Customer-Data-Processing-and-report-generator-java-config-\target\classes started by comviva in D:\customer\Customer-Data-Processing-and-report-generator-java-config-)
+- No active profile set, falling back to default profiles: default
+- Started CustomerProcessingApplication in 1.423 seconds (JVM running for 1.884)
+- Customer with phone number 80970 ------->Registration Failed -->Duplicate phone number
+- Customer with phone number 80980 ------->Registration Failed -->Duplicate phone number
+- Customer with phone number 80983 ------->Registration Failed -->Duplicate phone number
+- Customer with phone number 80986 ------->Registration Failed -->Duplicate phone number
+- Customer with phone number 80988 ------->Registration Failed -->Duplicate phone number
+- Customer with phone number 80969 ------->Registration Failed : Phone Number should be numeric containing digits [0-9].
+- Customer with phone number 80977 ------->Registration Failed -->Duplicate phone number
+- Customer with phone number 80989 ------->Registration Failed -->Duplicate phone number
+- Customer with phone number 80991 ------->Registration Failed -->Duplicate phone number
+- Customer with phone number kkk ------->Registration Failed : Phone Number should be numeric containing digits [0-9].
+- Customer with phone number 80978 ------->Registration Failed -->Duplicate phone number
+- Customer with phone number 80972 ------->Registration Failed -->Duplicate phone number
+- Customer with phone number 80979 ------->Registration Failed -->Duplicate phone number
+- Customer with phone number 80984 ------->Registration Failed -->Duplicate phone number
+- Customer with phone number 80987 ------->Registration Failed -->Duplicate phone number
+- Customer with phone number 80973 ------->Registration Failed : Phone Number should be numeric containing digits [0-9].
+- Customer with phone number 80981 ------->Registration Failed -->Duplicate phone number
+- Customer with phone number 80985 ------->Registration Failed -->Duplicate phone number
+- Customer with phone number 80990 ------->Registration Failed -->Duplicate phone number
+- Customer with phone number 80992 ------->Registration Failed -->Duplicate phone number
+- Customer with phone number 80994 ------->Registration Failed -->Duplicate phone number
+- Customer with phone number 909991 ------->Registration Failed -->Duplicate phone number
+- Customer with phone number 80976 ------->Registration Failed -->Duplicate phone number
+- Customer with phone number 80982 ------->Registration Failed -->Duplicate phone number
+- Customer with phone number 80993 ------->Registration Failed -->Duplicate phone number
+- Customer with phone number 909951 ------->Registration Failed -->Duplicate phone number
+- Customer with phone number  ------->Registration Failed : Phone Number should be numeric containing digits [0-9].
+- Customer with phone number 80975 ------->Registration Failed -->Duplicate phone number
+- Customer with phone number 80974 ------->Registration Failed -->Duplicate phone number
+- Customer with phone number 80971 ------->Registration Failed : Phone Number should be numeric containing digits [0-9].
+- Job Execution Completed
+- Starting CustomerProcessingApplication on MCKD-TRNG60-46 with PID 10432 (D:\customer\Customer-Data-Processing-and-report-generator-java-config-\target\classes started by comviva in D:\customer\Customer-Data-Processing-and-report-generator-java-config-)
+- No active profile set, falling back to default profiles: default
+- Started CustomerProcessingApplication in 1.471 seconds (JVM running for 1.993)
+- Customer with phone number 80972 ------->Registration Failed -->Duplicate phone number
+- Customer with phone number 80970 ------->Registration Failed -->Duplicate phone number
+- Customer with phone number 80989 ------->Registration Failed -->Duplicate phone number
+- Customer with phone number 80991 ------->Registration Failed -->Duplicate phone number
+- Customer with phone number 80993 ------->Registration Failed -->Duplicate phone number
+- Customer with phone number 909951 ------->Registration Failed -->Duplicate phone number
+- Customer with phone number 80973 ------->Registration Failed : Phone Number should be numeric containing digits [0-9].
+- Customer with phone number 80976 ------->Registration Failed -->Duplicate phone number
+- Customer with phone number 80985 ------->Registration Failed -->Duplicate phone number
+- Customer with phone number 80987 ------->Registration Failed -->Duplicate phone number
+- Customer with phone number  ------->Registration Failed : Phone Number should be numeric containing digits [0-9].
+- Customer with phone number 80990 ------->Registration Failed -->Duplicate phone number
+- Customer with phone number 80992 ------->Registration Failed -->Duplicate phone number
+- Customer with phone number 80994 ------->Registration Failed -->Duplicate phone number
+- Customer with phone number 909991 ------->Registration Failed -->Duplicate phone number
+- Customer with phone number 80975 ------->Registration Failed -->Duplicate phone number
+- Customer with phone number 80977 ------->Registration Failed -->Duplicate phone number
+- Customer with phone number 80979 ------->Registration Failed -->Duplicate phone number
+- Customer with phone number 80980 ------->Registration Failed -->Duplicate phone number
+- Customer with phone number 80981 ------->Registration Failed -->Duplicate phone number
+- Customer with phone number 80982 ------->Registration Failed -->Duplicate phone number
+- Customer with phone number 80983 ------->Registration Failed -->Duplicate phone number
+- Customer with phone number 80984 ------->Registration Failed -->Duplicate phone number
+- Customer with phone number 80969 ------->Registration Failed : Phone Number should be numeric containing digits [0-9].
+- Customer with phone number 80974 ------->Registration Failed -->Duplicate phone number
+- Customer with phone number 80986 ------->Registration Failed -->Duplicate phone number
+- Customer with phone number 80988 ------->Registration Failed -->Duplicate phone number
+- Customer with phone number 80971 ------->Registration Failed : Phone Number should be numeric containing digits [0-9].
+- Customer with phone number 80978 ------->Registration Failed -->Duplicate phone number
+- Customer with phone number kkk ------->Registration Failed : Phone Number should be numeric containing digits [0-9].
+- Job Execution Completed
+- Starting CustomerProcessingApplication on MCKD-TRNG60-46 with PID 11272 (D:\customer\Customer-Data-Processing-and-report-generator-java-config-\target\classes started by comviva in D:\customer\Customer-Data-Processing-and-report-generator-java-config-)
+- No active profile set, falling back to default profiles: default
+- Started CustomerProcessingApplication in 1.492 seconds (JVM running for 1.951)
+- Customer with phone number 80974 ------->Registration Failed -->Duplicate phone number
+- Customer with phone number 80970 ------->Registration Failed -->Duplicate phone number
+- Customer with phone number 80972 ------->Registration Failed -->Duplicate phone number
+- Customer with phone number 80990 ------->Registration Failed -->Duplicate phone number
+- Customer with phone number 80993 ------->Registration Failed -->Duplicate phone number
+- Customer with phone number 80994 ------->Registration Failed -->Duplicate phone number
+- Customer with phone number 80986 ------->Registration Failed -->Duplicate phone number
+- Customer with phone number 80988 ------->Registration Failed -->Duplicate phone number
+- Customer with phone number 80976 ------->Registration Failed -->Duplicate phone number
+- Customer with phone number kkk ------->Registration Failed : Phone Number should be numeric containing digits [0-9].
+- Customer with phone number 80978 ------->Registration Failed -->Duplicate phone number
+- Customer with phone number 80981 ------->Registration Failed -->Duplicate phone number
+- Customer with phone number 80983 ------->Registration Failed -->Duplicate phone number
+- Customer with phone number 80984 ------->Registration Failed -->Duplicate phone number
+- Customer with phone number 80985 ------->Registration Failed -->Duplicate phone number
+- Customer with phone number 80987 ------->Registration Failed -->Duplicate phone number
+- Customer with phone number 80989 ------->Registration Failed -->Duplicate phone number
+- Customer with phone number 80991 ------->Registration Failed -->Duplicate phone number
+- Customer with phone number 80992 ------->Registration Failed -->Duplicate phone number
+- Customer with phone number 909951 ------->Registration Failed -->Duplicate phone number
+- Customer with phone number 909991 ------->Registration Failed -->Duplicate phone number
+- Customer with phone number  ------->Registration Failed : Phone Number should be numeric containing digits [0-9].
+- Customer with phone number 80977 ------->Registration Failed -->Duplicate phone number
+- Customer with phone number 80979 ------->Registration Failed -->Duplicate phone number
+- Customer with phone number 80980 ------->Registration Failed -->Duplicate phone number
+- Customer with phone number 80982 ------->Registration Failed -->Duplicate phone number
+- Customer with phone number 80971 ------->Registration Failed : Phone Number should be numeric containing digits [0-9].
+- Customer with phone number 80973 ------->Registration Failed : Phone Number should be numeric containing digits [0-9].
+- Customer with phone number 80975 ------->Registration Failed -->Duplicate phone number
+- Customer with phone number 8096988888 ------->Registration Failed -->First Name field is empty.
+- Job Execution Completed
