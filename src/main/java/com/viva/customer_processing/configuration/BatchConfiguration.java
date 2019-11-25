@@ -17,6 +17,7 @@ import org.springframework.batch.core.configuration.annotation.JobBuilderFactory
 import org.springframework.batch.core.configuration.annotation.StepBuilderFactory;
 import org.springframework.batch.core.configuration.annotation.StepScope;
 import org.springframework.batch.core.launch.support.RunIdIncrementer;
+import org.springframework.batch.core.step.skip.SkipPolicy;
 import org.springframework.batch.item.ItemReader;
 import org.springframework.batch.item.ItemWriter;
 import org.springframework.batch.item.database.BeanPropertyItemSqlParameterSourceProvider;
@@ -47,6 +48,8 @@ import org.springframework.jdbc.core.BeanPropertyRowMapper;
 
 import com.viva.customer_processing.entity.Customer;
 import com.viva.customer_processing.entity.FeeInfo;
+import com.viva.customer_processing.exception_handlers.CustomerExceptionHandler;
+import com.viva.customer_processing.exception_handlers.FeeExceptionHandler;
 import com.viva.customer_processing.listener.JobListner;
 import com.viva.customer_processing.processor.CustomerItemProcessor;
 import com.viva.customer_processing.processor.DeleteCustomerProcessor;
@@ -66,7 +69,7 @@ public class BatchConfiguration {
     public DataSource dataSource;
      
     
-    @Bean
+    @Bean   
     @Qualifier("importUserJob")
     @Primary
     public Job importUserJob(@Qualifier("reportGeneratorStep")  Step reportGeneratorStep,JobListner listener,TaskExecutor taskExecutor) {
@@ -87,8 +90,9 @@ public class BatchConfiguration {
             .reader(customerReader())
             .processor(customerProcessor())
             .writer(customerWriter())
+            .faultTolerant().skipPolicy(exceptionHandlerForCustomer())
             .taskExecutor(taskExecutor)
-            .throttleLimit(10)
+            .throttleLimit(10)           
             .build();
     }
     
@@ -99,6 +103,7 @@ public class BatchConfiguration {
             .reader(customerReader())
             .processor(feeInfoProcessor())
             .writer(feeInfoWriter())
+            .faultTolerant().skipPolicy(exceptionHandlerForFee())
             .taskExecutor(taskExecutor)
             .throttleLimit(10)
             .build();
@@ -228,6 +233,18 @@ public class BatchConfiguration {
     @Bean FeeInfoProcessor feeInfoProcessor() {
     	return new FeeInfoProcessor();
     }
+    
+
+    @Bean
+    public SkipPolicy exceptionHandlerForCustomer() {
+    	return new CustomerExceptionHandler();
+    }
+    
+    @Bean
+    public SkipPolicy exceptionHandlerForFee() {
+    	return new FeeExceptionHandler();
+    }
+
     
     @Bean
     public JdbcBatchItemWriter<Customer> customerWriter() {  	

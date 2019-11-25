@@ -1,0 +1,68 @@
+- Starting CustomerProcessingApplication on MCKD-TRNG60-46 with PID 16264 (D:\customer\Customer-Data-Processing-and-report-generator-java-config-\target\classes started by comviva in D:\customer\Customer-Data-Processing-and-report-generator-java-config-)
+- No active profile set, falling back to default profiles: default
+- Started CustomerProcessingApplication in 1.57 seconds (JVM running for 2.093)
+- Customer with phone number 80976 ------->Registration Failed -->Duplicate phone number
+- Customer with phone number 80984 ------->Registration Failed -->Duplicate phone number
+- Customer with phone number 80970 ------->Registration Failed -->Duplicate phone number
+- Customer with phone number 80975 ------->Registration Failed -->Duplicate phone number
+- Customer with phone number 80977 ------->Registration Failed -->Duplicate phone number
+- Customer with phone number 80979 ------->Registration Failed -->Duplicate phone number
+- Customer with phone number 80981 ------->Registration Failed -->Duplicate phone number
+- Customer with phone number 80983 ------->Registration Failed -->Duplicate phone number
+- Customer with phone number 80985 ------->Registration Failed -->Duplicate phone number
+- Customer with phone number 80987 ------->Registration Failed -->Duplicate phone number
+- Customer with phone number 80986 ------->Registration Failed -->Duplicate phone number
+- Customer with phone number 80988 ------->Registration Failed -->Duplicate phone number
+- Customer with phone number 80990 ------->Registration Failed -->Duplicate phone number
+- Customer with phone number 80992 ------->Registration Failed -->Duplicate phone number
+- Customer with phone number 80994 ------->Registration Failed -->Duplicate phone number
+- Customer with phone number 909991 ------->Registration Failed -->Duplicate phone number
+- Customer with phone number 80968 ------->Registration Failed -->Duplicate phone number
+- Customer with phone number 80978 ------->Registration Failed -->Duplicate phone number
+- Customer with phone number 80969 ------->Registration Failed -->First Name field is empty.
+- Customer with phone number  ------->Registration Failed -->Phone number field is empty.
+- Customer with phone number  ------->Registration Failed -->City field is empty.
+- Customer with phone number 80972 ------->Registration Failed -->Duplicate phone number
+- Customer with phone number  ------->Registration Failed -->Address field is empty.
+- Customer with phone number 80980 ------->Registration Failed -->Duplicate phone number
+- Customer with phone number 80982 ------->Registration Failed -->Duplicate phone number
+- Customer with phone number 80989 ------->Registration Failed -->Duplicate phone number
+- Customer with phone number 80991 ------->Registration Failed -->Duplicate phone number
+- Customer with phone number 80993 ------->Registration Failed -->Duplicate phone number
+- Customer with phone number 909951 ------->Registration Failed -->Duplicate phone number
+- Customer with phone number 80974 ------->Registration Failed -->Duplicate phone number
+- Job Execution Completed
+- Starting CustomerProcessingApplication on MCKD-TRNG60-46 with PID 14632 (D:\customer\Customer-Data-Processing-and-report-generator-java-config-\target\classes started by comviva in D:\customer\Customer-Data-Processing-and-report-generator-java-config-)
+- No active profile set, falling back to default profiles: default
+- Started CustomerProcessingApplication in 1.409 seconds (JVM running for 1.87)
+- Customer with phone number 80970 ------->Registration Failed -->Duplicate phone number
+- Customer with phone number 80968 ------->Registration Failed -->Duplicate phone number
+- Customer with phone number  ------->Registration Failed -->Address field is empty.
+- Customer with phone number 80989 ------->Registration Failed -->Duplicate phone number
+- Customer with phone number 80990 ------->Registration Failed -->Duplicate phone number
+- Customer with phone number 80992 ------->Registration Failed -->Duplicate phone number
+- Customer with phone number 80969 ------->Registration Failed -->First Name field is empty.
+- Customer with phone number 80977 ------->Registration Failed -->Duplicate phone number
+- Customer with phone number 80978 ------->Registration Failed -->Duplicate phone number
+- Customer with phone number 80979 ------->Registration Failed -->Duplicate phone number
+- Customer with phone number 80980 ------->Registration Failed -->Duplicate phone number
+- Customer with phone number 80981 ------->Registration Failed -->Duplicate phone number
+- Customer with phone number 80982 ------->Registration Failed -->Duplicate phone number
+- Customer with phone number 80983 ------->Registration Failed -->Duplicate phone number
+- Customer with phone number 80984 ------->Registration Failed -->Duplicate phone number
+- Customer with phone number 80985 ------->Registration Failed -->Duplicate phone number
+- Customer with phone number 80986 ------->Registration Failed -->Duplicate phone number
+- Customer with phone number 80987 ------->Registration Failed -->Duplicate phone number
+- Customer with phone number 80988 ------->Registration Failed -->Duplicate phone number
+- Customer with phone number 80991 ------->Registration Failed -->Duplicate phone number
+- Customer with phone number 80993 ------->Registration Failed -->Duplicate phone number
+- Customer with phone number 80994 ------->Registration Failed -->Duplicate phone number
+- Customer with phone number 909951 ------->Registration Failed -->Duplicate phone number
+- Customer with phone number 909991 ------->Registration Failed -->Duplicate phone number
+- Customer with phone number 80972 ------->Registration Failed -->Duplicate phone number
+- Customer with phone number 80976 ------->Registration Failed -->Duplicate phone number
+- Customer with phone number 80975 ------->Registration Failed -->Duplicate phone number
+- Customer with phone number  ------->Registration Failed -->City field is empty.
+- Customer with phone number  ------->Registration Failed -->Phone number field is empty.
+- Customer with phone number 80974 ------->Registration Failed -->Duplicate phone number
+- Job Execution Completed

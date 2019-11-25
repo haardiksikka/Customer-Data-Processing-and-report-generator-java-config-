@@ -21,7 +21,7 @@ public class CustomerItemProcessor implements ItemProcessor<Customer,Customer> {
 	Slf4jLogger logger = new Slf4jLogger(CustomerProcessingApplication.class);
 	
 	public Customer process(Customer customer) {
-		List<Customer> dbRecords = listener.getDbRecords();
+		Set<Customer> dbRecords = listener.getDbRecords();
 		if(dbRecords.contains(customer) || fileData.contains(customer)) {
 			logger.error("Customer with phone number "+customer.getPhoneNumber()+" ------->Registration Failed -->Duplicate phone number");		
 			return null;

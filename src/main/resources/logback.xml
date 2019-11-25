@@ -1,9 +1,9 @@
 <configuration>
  <property name="LOG_PATH" value="logs" />
-
+ <timestamp key="bySecond" datePattern="yyyyMMdd" />	
  <appender name="FileAppender" class="ch.qos.logback.core.rolling.RollingFileAppender">
 	<Append>true</Append>
-	<file>${LOG_PATH}/customerdata.log</file>
+	<file>${LOG_PATH}/customerdata-${bySecond}.log</file>
     <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
       <!-- rollover daily -->
       <fileNamePattern>${LOG_PATH}/cpa-%d{yyyy-MM-dd}.%i.log</fileNamePattern>
@@ -25,6 +25,8 @@
  <logger name="com.viva.customer_processing.processor" level="DEBUG" additivity="false">
     <appender-ref ref="FileAppender"/>
  </logger>
+ 
+ 
   
  
  

@@ -23,7 +23,7 @@ public class FeeInfoProcessor implements ItemProcessor<Customer, FeeInfo> {
 	
 	
 	public FeeInfo process(Customer customer) {
-		List<Customer> dbRecords = listener.getDbRecords();
+		Set<Customer> dbRecords = listener.getDbRecords();
 		if(dbRecords.contains(customer) || fileData.contains(customer)) {
 			return null;
 		}
@@ -43,6 +43,7 @@ public class FeeInfoProcessor implements ItemProcessor<Customer, FeeInfo> {
 			return null;
 		}
 		else {
+			fileData.add(customer);
 			FeeInfo feeDetails = new FeeInfo();
 			feeDetails.setPhoneNumber(customer.getPhoneNumber());
 			feeDetails.setFeeAmount(feeAmount);

@@ -2,7 +2,9 @@ package com.viva.customer_processing.listener;
 
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 import javax.sql.DataSource;
 
@@ -26,12 +28,12 @@ public class JobListner extends JobExecutionListenerSupport {
 	private final JdbcTemplate jdbcTemplate;
 	@Autowired DataSource dataSource;
 	
-	private static List<Customer> dbRecords;
+	private static Set<Customer> dbRecords;
 	Slf4jLogger logger = new Slf4jLogger(CustomerProcessingApplication.class);
 	@Autowired
 	public JobListner(JdbcTemplate jdbcTemplate) {
 		this.jdbcTemplate = jdbcTemplate;
-		dbRecords = new ArrayList<Customer>();
+		dbRecords = new HashSet<Customer>();
 	}
 	@Override
 	public void beforeJob(JobExecution jobExecution) {
@@ -53,7 +55,7 @@ public class JobListner extends JobExecutionListenerSupport {
 	public void afterJob(JobExecution jobExecution) {
 		logger.info("Job Execution Completed");
 	}
-	public List<Customer> getDbRecords(){
+	public Set<Customer> getDbRecords(){
 		return dbRecords;
 	}
 	
