@@ -81,17 +81,17 @@ class CustomerProcessingApplicationTests {
 		Assert.assertEquals("COMPLETED", jobExecution.getExitStatus().getExitCode().toString());
 	}
 	
-	@Test
-	void test_deactivate_customer_step() {
-		JobExecution jobExecution = jobLauncherTestUtils.launchStep("deactivateCustomer");
-		Assert.assertEquals("COMPLETED", jobExecution.getExitStatus().getExitCode().toString());
-	}
-	
-	@Test
-	void test_delete_fee_info_step() {
-		JobExecution jobExecution = jobLauncherTestUtils.launchStep("deleteFeeInfo");
-		Assert.assertEquals("COMPLETED", jobExecution.getExitStatus().getExitCode().toString());
-	}
+//	@Test
+//	void test_deactivate_customer_step() {
+//		JobExecution jobExecution = jobLauncherTestUtils.launchStep("deactivateCustomer");
+//		Assert.assertEquals("COMPLETED", jobExecution.getExitStatus().getExitCode().toString());
+//	}
+//	
+//	@Test
+//	void test_delete_fee_info_step() {
+//		JobExecution jobExecution = jobLauncherTestUtils.launchStep("deleteFeeInfo");
+//		Assert.assertEquals("COMPLETED", jobExecution.getExitStatus().getExitCode().toString());
+//	}
 	
 	
 	
