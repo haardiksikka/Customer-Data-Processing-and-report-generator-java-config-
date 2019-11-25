@@ -202,3 +202,71 @@
 - Customer with phone number 80975 ------->Registration Failed -->Duplicate phone number
 - Customer with phone number 8096988888 ------->Registration Failed -->First Name field is empty.
 - Job Execution Completed
+- Starting CustomerProcessingApplication on MCKL-04034-T with PID 14116 (D:\customer\Customer-Data-Processing-and-report-generator-java-config-\target\classes started by rohit.shakya in D:\customer\Customer-Data-Processing-and-report-generator-java-config-)
+- No active profile set, falling back to default profiles: default
+- Started CustomerProcessingApplication in 4.736 seconds (JVM running for 5.719)
+- Customer with phone number 80973 ------->Registration Failed : Phone Number should be numeric containing digits [0-9].
+- Customer with phone number kkk ------->Registration Failed : Phone Number should be numeric containing digits [0-9].
+- Customer with phone number 80974 ------->Registration Failed : Phone Number should be numeric containing digits [0-9].
+- Customer with phone number 80978 ------->Registration Failed : Phone Number should be numeric containing digits [0-9].
+- Customer with phone number 80971 ------->Registration Failed : Phone Number should be numeric containing digits [0-9].
+- Customer with phone number  ------->Registration Failed : Phone Number should be numeric containing digits [0-9].
+- Customer with phone number 80976 ------->Registration Failed : Phone Number should be numeric containing digits [0-9].
+- Customer with phone number 80984 ------->Registration Failed : Phone Number should be numeric containing digits [0-9].
+- Customer with phone number 80972 ------->Registration Failed : Phone Number should be numeric containing digits [0-9].
+- Customer with phone number 80977 ------->Registration Failed : Phone Number should be numeric containing digits [0-9].
+- Customer with phone number 80980 ------->Registration Failed : Phone Number should be numeric containing digits [0-9].
+- Customer with phone number 80975 ------->Registration Failed : Phone Number should be numeric containing digits [0-9].
+- Customer with phone number 80981 ------->Registration Failed : Phone Number should be numeric containing digits [0-9].
+- Customer with phone number 80983 ------->Registration Failed : Phone Number should be numeric containing digits [0-9].
+- Customer with phone number 80970 ------->Registration Failed : Phone Number should be numeric containing digits [0-9].
+- Customer with phone number 80985 ------->Registration Failed : Phone Number should be numeric containing digits [0-9].
+- Customer with phone number 80986 ------->Registration Failed : Phone Number should be numeric containing digits [0-9].
+- Customer with phone number 80979 ------->Registration Failed : Phone Number should be numeric containing digits [0-9].
+- Customer with phone number 80987 ------->Registration Failed : Phone Number should be numeric containing digits [0-9].
+- Customer with phone number 80982 ------->Registration Failed : Phone Number should be numeric containing digits [0-9].
+- Customer with phone number 80990 ------->Registration Failed : Phone Number should be numeric containing digits [0-9].
+- Customer with phone number 80992 ------->Registration Failed : Phone Number should be numeric containing digits [0-9].
+- Customer with phone number 80993 ------->Registration Failed : Phone Number should be numeric containing digits [0-9].
+- Customer with phone number 909991 ------->Registration Failed : Phone Number should be numeric containing digits [0-9].
+- Customer with phone number 80988 ------->Registration Failed : Phone Number should be numeric containing digits [0-9].
+- Customer with phone number 80994 ------->Registration Failed : Phone Number should be numeric containing digits [0-9].
+- Customer with phone number 80989 ------->Registration Failed : Phone Number should be numeric containing digits [0-9].
+- Customer with phone number 909951 ------->Registration Failed : Phone Number should be numeric containing digits [0-9].
+- Customer with phone number 80991 ------->Registration Failed : Phone Number should be numeric containing digits [0-9].
+- Customer with phone number 8096988888 ------->Registration Failed -->First Name field is empty.
+- Job Execution Completed
+- Starting CustomerProcessingApplication on MCKL-04034-T with PID 20084 (D:\customer\Customer-Data-Processing-and-report-generator-java-config-\target\classes started by rohit.shakya in D:\customer\Customer-Data-Processing-and-report-generator-java-config-)
+- No active profile set, falling back to default profiles: default
+- Started CustomerProcessingApplication in 2.441 seconds (JVM running for 3.158)
+- Customer with phone number 80973 ------->Registration Failed : Phone Number should be numeric containing digits [0-9].
+- Customer with phone number 80976 ------->Registration Failed : Phone Number should be numeric containing digits [0-9].
+- Customer with phone number 80981 ------->Registration Failed : Phone Number should be numeric containing digits [0-9].
+- Customer with phone number 80978 ------->Registration Failed : Phone Number should be numeric containing digits [0-9].
+- Customer with phone number 80980 ------->Registration Failed : Phone Number should be numeric containing digits [0-9].
+- Customer with phone number 80982 ------->Registration Failed : Phone Number should be numeric containing digits [0-9].
+- Customer with phone number 80984 ------->Registration Failed : Phone Number should be numeric containing digits [0-9].
+- Customer with phone number 80972 ------->Registration Failed : Phone Number should be numeric containing digits [0-9].
+- Customer with phone number 80985 ------->Registration Failed : Phone Number should be numeric containing digits [0-9].
+- Customer with phone number 80987 ------->Registration Failed : Phone Number should be numeric containing digits [0-9].
+- Customer with phone number 80989 ------->Registration Failed : Phone Number should be numeric containing digits [0-9].
+- Customer with phone number 80991 ------->Registration Failed : Phone Number should be numeric containing digits [0-9].
+- Customer with phone number 80992 ------->Registration Failed : Phone Number should be numeric containing digits [0-9].
+- Customer with phone number 8096988888 ------->Registration Failed -->First Name field is empty.
+- Customer with phone number 80993 ------->Registration Failed : Phone Number should be numeric containing digits [0-9].
+- Customer with phone number 80986 ------->Registration Failed : Phone Number should be numeric containing digits [0-9].
+- Customer with phone number 909951 ------->Registration Failed : Phone Number should be numeric containing digits [0-9].
+- Customer with phone number 80971 ------->Registration Failed : Phone Number should be numeric containing digits [0-9].
+- Customer with phone number 80988 ------->Registration Failed : Phone Number should be numeric containing digits [0-9].
+- Customer with phone number 80977 ------->Registration Failed : Phone Number should be numeric containing digits [0-9].
+- Customer with phone number 80990 ------->Registration Failed : Phone Number should be numeric containing digits [0-9].
+- Customer with phone number 80994 ------->Registration Failed : Phone Number should be numeric containing digits [0-9].
+- Customer with phone number 80970 ------->Registration Failed : Phone Number should be numeric containing digits [0-9].
+- Customer with phone number  ------->Registration Failed : Phone Number should be numeric containing digits [0-9].
+- Customer with phone number 80979 ------->Registration Failed : Phone Number should be numeric containing digits [0-9].
+- Customer with phone number 80983 ------->Registration Failed : Phone Number should be numeric containing digits [0-9].
+- Customer with phone number 909991 ------->Registration Failed : Phone Number should be numeric containing digits [0-9].
+- Customer with phone number 8097480974 ------->Registration Status : Success.
+- Customer with phone number 80975 ------->Registration Failed : Phone Number should be numeric containing digits [0-9].
+- Customer with phone number kkk ------->Registration Failed : Phone Number should be numeric containing digits [0-9].
+- Job Execution Completed

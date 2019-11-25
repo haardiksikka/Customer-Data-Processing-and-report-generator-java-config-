@@ -27,7 +27,7 @@ public class JobListner extends JobExecutionListenerSupport {
 	@Autowired
 	private final JdbcTemplate jdbcTemplate;
 	@Autowired DataSource dataSource;
-	
+	private long startTime = 0;
 	private static Set<Customer> dbRecords;
 	Slf4jLogger logger = new Slf4jLogger(CustomerProcessingApplication.class);
 	@Autowired
@@ -37,7 +37,7 @@ public class JobListner extends JobExecutionListenerSupport {
 	}
 	@Override
 	public void beforeJob(JobExecution jobExecution) {
-		
+		startTime = System.nanoTime();
 		this.jdbcTemplate.setDataSource(dataSource);
 	
 		jdbcTemplate.query("SELECT first_name, middle_name,last_name,address, city, phone_number FROM customer",
@@ -53,6 +53,8 @@ public class JobListner extends JobExecutionListenerSupport {
 	}
 	@Override
 	public void afterJob(JobExecution jobExecution) {
+		long endTime = System.nanoTime();
+		System.out.println(endTime-startTime);		
 		logger.info("Job Execution Completed");
 	}
 	public Set<Customer> getDbRecords(){

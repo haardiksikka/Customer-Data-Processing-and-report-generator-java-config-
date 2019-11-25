@@ -28,7 +28,6 @@ public class CustomerItemProcessor implements ItemProcessor<Customer,Customer> {
 			return null;
 		}
 		else if(!MobileNumberValidator.isValid(customer.getPhoneNumber())) {
-			System.out.println(customer.getFirstName());
 			logger.error("Customer with phone number "+customer.getPhoneNumber()+" ------->Registration Failed : Phone Number should be numeric containing digits [0-9].");
 			return null;
 		}

@@ -1,0 +1,234 @@
+- Starting CustomerProcessingApplication on MCKD-TRNG60-46 with PID 9892 (D:\customer\Customer-Data-Processing-and-report-generator-java-config-\target\classes started by comviva in D:\customer\Customer-Data-Processing-and-report-generator-java-config-)
+- No active profile set, falling back to default profiles: default
+- Started CustomerProcessingApplication in 1.336 seconds (JVM running for 1.769)
+- Customer with phone number 0 ------->Registration Status : Failed.
+- Customer with phone number 1 ------->Registration Status : Failed.
+- Customer with phone number 2 ------->Registration Status : Failed.
+- Customer with phone number 3 ------->Registration Status : Failed.
+- Customer with phone number 4 ------->Registration Status : Failed.
+- Customer with phone number 5 ------->Registration Status : Failed.
+- Customer with phone number 6 ------->Registration Status : Failed.
+- Customer with phone number 7 ------->Registration Status : Failed.
+- Customer with phone number 8 ------->Registration Status : Failed.
+- Customer with phone number 30 ------->Registration Status : Failed.
+- Customer with phone number 25 ------->Registration Status : Failed.
+- Starting CustomerProcessingApplication on MCKD-TRNG60-46 with PID 12568 (D:\customer\Customer-Data-Processing-and-report-generator-java-config-\target\classes started by comviva in D:\customer\Customer-Data-Processing-and-report-generator-java-config-)
+- No active profile set, falling back to default profiles: default
+- Started CustomerProcessingApplication in 1.334 seconds (JVM running for 1.775)
+- Customer with phone number 0 ------->Registration Status : Failed.
+- Customer with phone number 1 ------->Registration Status : Failed.
+- Customer with phone number 2 ------->Registration Status : Failed.
+- Customer with phone number 3 ------->Registration Status : Failed.
+- Customer with phone number 4 ------->Registration Status : Failed.
+- Customer with phone number 5 ------->Registration Status : Failed.
+- Customer with phone number 6 ------->Registration Status : Failed.
+- Customer with phone number 7 ------->Registration Status : Failed.
+- Customer with phone number 8 ------->Registration Status : Failed.
+- Customer with phone number 30 ------->Registration Status : Failed.
+- Customer with phone number 41 ------->Registration Status : Success.
+- Starting CustomerProcessingApplicationTests on MCKD-TRNG60-46 with PID 13188 (started by comviva in D:\customer\Customer-Data-Processing-and-report-generator-java-config-)
+- No active profile set, falling back to default profiles: default
+- Started CustomerProcessingApplicationTests in 1.427 seconds (JVM running for 2.349)
+- Customer with phone number 0 ------->Registration Status : Failed.
+- Customer with phone number 1 ------->Registration Status : Failed.
+- Customer with phone number 2 ------->Registration Status : Failed.
+- Customer with phone number 3 ------->Registration Status : Failed.
+- Customer with phone number 4 ------->Registration Status : Failed.
+- Customer with phone number 5 ------->Registration Status : Failed.
+- Customer with phone number 6 ------->Registration Status : Failed.
+- Customer with phone number 7 ------->Registration Status : Failed.
+- Customer with phone number 8 ------->Registration Status : Failed.
+- Customer with phone number 30 ------->Registration Status : Failed.
+- Customer with phone number 41 ------->Registration Status : Failed.
+- Customer with phone number 0 ------->Registration Status : Failed.
+- Customer with phone number 1 ------->Registration Status : Failed.
+- Customer with phone number 2 ------->Registration Status : Failed.
+- Customer with phone number 3 ------->Registration Status : Failed.
+- Customer with phone number 4 ------->Registration Status : Failed.
+- Customer with phone number 5 ------->Registration Status : Failed.
+- Customer with phone number 6 ------->Registration Status : Failed.
+- Customer with phone number 7 ------->Registration Status : Failed.
+- Customer with phone number 8 ------->Registration Status : Failed.
+- Customer with phone number 30 ------->Registration Status : Failed.
+- Customer with phone number 41 ------->Registration Status : Failed.
+- Starting CustomerProcessingApplicationTests on MCKD-TRNG60-46 with PID 13224 (started by comviva in D:\customer\Customer-Data-Processing-and-report-generator-java-config-)
+- No active profile set, falling back to default profiles: default
+- Started CustomerProcessingApplicationTests in 1.425 seconds (JVM running for 2.588)
+- Customer with phone number 0 ------->Registration Status : Failed.
+- Customer with phone number 1 ------->Registration Status : Failed.
+- Customer with phone number 2 ------->Registration Status : Failed.
+- Customer with phone number 3 ------->Registration Status : Failed.
+- Customer with phone number 4 ------->Registration Status : Failed.
+- Customer with phone number 5 ------->Registration Status : Failed.
+- Customer with phone number 6 ------->Registration Status : Failed.
+- Customer with phone number 7 ------->Registration Status : Failed.
+- Customer with phone number 8 ------->Registration Status : Failed.
+- Customer with phone number 30 ------->Registration Status : Failed.
+- Customer with phone number 41 ------->Registration Status : Failed.
+- Customer with phone number 0 ------->Registration Status : Failed.
+- Customer with phone number 1 ------->Registration Status : Failed.
+- Customer with phone number 2 ------->Registration Status : Failed.
+- Customer with phone number 3 ------->Registration Status : Failed.
+- Customer with phone number 4 ------->Registration Status : Failed.
+- Customer with phone number 5 ------->Registration Status : Failed.
+- Customer with phone number 6 ------->Registration Status : Failed.
+- Customer with phone number 7 ------->Registration Status : Failed.
+- Customer with phone number 8 ------->Registration Status : Failed.
+- Customer with phone number 30 ------->Registration Status : Failed.
+- Customer with phone number 41 ------->Registration Status : Failed.
+- Starting CustomerProcessingApplicationTests on MCKD-TRNG60-46 with PID 10236 (started by comviva in D:\customer\Customer-Data-Processing-and-report-generator-java-config-)
+- No active profile set, falling back to default profiles: default
+- Started CustomerProcessingApplicationTests in 1.444 seconds (JVM running for 2.435)
+- Customer with phone number 0 ------->Registration Status : Failed.
+- Customer with phone number 1 ------->Registration Status : Failed.
+- Customer with phone number 2 ------->Registration Status : Failed.
+- Customer with phone number 3 ------->Registration Status : Failed.
+- Customer with phone number 4 ------->Registration Status : Failed.
+- Customer with phone number 5 ------->Registration Status : Failed.
+- Customer with phone number 6 ------->Registration Status : Failed.
+- Customer with phone number 7 ------->Registration Status : Failed.
+- Customer with phone number 8 ------->Registration Status : Failed.
+- Customer with phone number 30 ------->Registration Status : Failed.
+- Customer with phone number 41 ------->Registration Status : Failed.
+- Customer with phone number 0 ------->Registration Status : Failed.
+- Customer with phone number 1 ------->Registration Status : Failed.
+- Customer with phone number 2 ------->Registration Status : Failed.
+- Customer with phone number 3 ------->Registration Status : Failed.
+- Customer with phone number 4 ------->Registration Status : Failed.
+- Customer with phone number 5 ------->Registration Status : Failed.
+- Customer with phone number 6 ------->Registration Status : Failed.
+- Customer with phone number 7 ------->Registration Status : Failed.
+- Customer with phone number 8 ------->Registration Status : Failed.
+- Customer with phone number 30 ------->Registration Status : Failed.
+- Customer with phone number 41 ------->Registration Status : Failed.
+- Starting CustomerProcessingApplicationTests on MCKD-TRNG60-46 with PID 12768 (started by comviva in D:\customer\Customer-Data-Processing-and-report-generator-java-config-)
+- No active profile set, falling back to default profiles: default
+- Started CustomerProcessingApplicationTests in 1.44 seconds (JVM running for 2.437)
+- Customer with phone number 0 ------->Registration Status : Failed.
+- Customer with phone number 1 ------->Registration Status : Failed.
+- Customer with phone number 2 ------->Registration Status : Failed.
+- Customer with phone number 3 ------->Registration Status : Failed.
+- Customer with phone number 4 ------->Registration Status : Failed.
+- Customer with phone number 5 ------->Registration Status : Failed.
+- Customer with phone number 6 ------->Registration Status : Failed.
+- Customer with phone number 7 ------->Registration Status : Failed.
+- Customer with phone number 8 ------->Registration Status : Failed.
+- Customer with phone number 30 ------->Registration Status : Failed.
+- Customer with phone number 41 ------->Registration Status : Failed.
+- Customer with phone number 0 ------->Registration Status : Failed.
+- Customer with phone number 1 ------->Registration Status : Failed.
+- Customer with phone number 2 ------->Registration Status : Failed.
+- Customer with phone number 3 ------->Registration Status : Failed.
+- Customer with phone number 4 ------->Registration Status : Failed.
+- Customer with phone number 5 ------->Registration Status : Failed.
+- Customer with phone number 6 ------->Registration Status : Failed.
+- Customer with phone number 7 ------->Registration Status : Failed.
+- Customer with phone number 8 ------->Registration Status : Failed.
+- Customer with phone number 30 ------->Registration Status : Failed.
+- Customer with phone number 41 ------->Registration Status : Failed.
+- Starting CustomerProcessingApplicationTests on MCKD-TRNG60-46 with PID 9044 (started by comviva in D:\customer\Customer-Data-Processing-and-report-generator-java-config-)
+- No active profile set, falling back to default profiles: default
+- Started CustomerProcessingApplicationTests in 1.444 seconds (JVM running for 2.434)
+- Customer with phone number 0 ------->Registration Status : Success.
+- Customer with phone number 1 ------->Registration Status : Success.
+- Customer with phone number 2 ------->Registration Status : Success.
+- Customer with phone number 3 ------->Registration Status : Success.
+- Customer with phone number 4 ------->Registration Status : Success.
+- Customer with phone number 5 ------->Registration Status : Success.
+- Customer with phone number 6 ------->Registration Status : Success.
+- Customer with phone number 7 ------->Registration Status : Success.
+- Customer with phone number 8 ------->Registration Status : Success.
+- Customer with phone number 30 ------->Registration Status : Success.
+- Customer with phone number 41 ------->Registration Status : Success.
+- Customer with phone number 0 ------->Registration Status : Failed.
+- Customer with phone number 1 ------->Registration Status : Failed.
+- Customer with phone number 2 ------->Registration Status : Failed.
+- Customer with phone number 3 ------->Registration Status : Failed.
+- Customer with phone number 4 ------->Registration Status : Failed.
+- Customer with phone number 5 ------->Registration Status : Failed.
+- Customer with phone number 6 ------->Registration Status : Failed.
+- Customer with phone number 7 ------->Registration Status : Failed.
+- Customer with phone number 8 ------->Registration Status : Failed.
+- Customer with phone number 30 ------->Registration Status : Failed.
+- Customer with phone number 41 ------->Registration Status : Failed.
+- Starting CustomerProcessingApplication on MCKD-TRNG60-46 with PID 11652 (D:\customer\Customer-Data-Processing-and-report-generator-java-config-\target\classes started by comviva in D:\customer\Customer-Data-Processing-and-report-generator-java-config-)
+- No active profile set, falling back to default profiles: default
+- Started CustomerProcessingApplication in 1.396 seconds (JVM running for 1.847)
+- Customer with phone number 0 ------->Registration Status : Failed.
+- Customer with phone number 1 ------->Registration Status : Failed.
+- Customer with phone number 2 ------->Registration Status : Failed.
+- Customer with phone number 3 ------->Registration Status : Failed.
+- Customer with phone number 4 ------->Registration Status : Failed.
+- Customer with phone number 5 ------->Registration Status : Failed.
+- Customer with phone number 6 ------->Registration Status : Failed.
+- Customer with phone number 7 ------->Registration Status : Failed.
+- Customer with phone number 8 ------->Registration Status : Failed.
+- Customer with phone number 30 ------->Registration Status : Failed.
+- Customer with phone number 41 ------->Registration Status : Failed.
+- Starting CustomerProcessingApplication on MCKD-TRNG60-46 with PID 10152 (D:\customer\Customer-Data-Processing-and-report-generator-java-config-\target\classes started by comviva in D:\customer\Customer-Data-Processing-and-report-generator-java-config-)
+- No active profile set, falling back to default profiles: default
+- Started CustomerProcessingApplication in 1.4 seconds (JVM running for 1.848)
+- Customer with phone number 0 ------->Registration Status : Success.
+- Customer with phone number 1 ------->Registration Status : Success.
+- Customer with phone number 2 ------->Registration Status : Success.
+- Customer with phone number 3 ------->Registration Status : Success.
+- Customer with phone number 4 ------->Registration Status : Success.
+- Customer with phone number 5 ------->Registration Status : Success.
+- Customer with phone number 6 ------->Registration Status : Success.
+- Customer with phone number 7 ------->Registration Status : Success.
+- Customer with phone number 8 ------->Registration Status : Success.
+- Customer with phone number 30 ------->Registration Status : Success.
+- Customer with phone number 41 ------->Registration Status : Success.
+- Starting CustomerProcessingApplication on MCKD-TRNG60-46 with PID 10164 (D:\customer\Customer-Data-Processing-and-report-generator-java-config-\target\classes started by comviva in D:\customer\Customer-Data-Processing-and-report-generator-java-config-)
+- No active profile set, falling back to default profiles: default
+- Started CustomerProcessingApplication in 1.422 seconds (JVM running for 1.878)
+- Customer with phone number 0 ------->Registration Status : Failed.
+- Customer with phone number 1 ------->Registration Status : Failed.
+- Customer with phone number 2 ------->Registration Status : Failed.
+- Customer with phone number 3 ------->Registration Status : Failed.
+- Customer with phone number 4 ------->Registration Status : Failed.
+- Customer with phone number 5 ------->Registration Status : Failed.
+- Customer with phone number 6 ------->Registration Status : Failed.
+- Customer with phone number 7 ------->Registration Status : Failed.
+- Customer with phone number 8 ------->Registration Status : Failed.
+- Customer with phone number 30 ------->Registration Status : Failed.
+- Customer with phone number 41 ------->Registration Status : Failed.
+- Starting CustomerProcessingApplication on MCKD-TRNG60-46 with PID 6132 (D:\customer\Customer-Data-Processing-and-report-generator-java-config-\target\classes started by comviva in D:\customer\Customer-Data-Processing-and-report-generator-java-config-)
+- No active profile set, falling back to default profiles: default
+- Started CustomerProcessingApplication in 1.446 seconds (JVM running for 1.9)
+- Customer with phone number 0 ------->Registration Status : Success.
+- Customer with phone number 1 ------->Registration Status : Success.
+- Customer with phone number 2 ------->Registration Status : Success.
+- Customer with phone number 3 ------->Registration Status : Success.
+- Customer with phone number 4 ------->Registration Status : Success.
+- Customer with phone number 5 ------->Registration Status : Success.
+- Customer with phone number 6 ------->Registration Status : Success.
+- Customer with phone number 7 ------->Registration Status : Success.
+- Customer with phone number 8 ------->Registration Status : Success.
+- Customer with phone number 30 ------->Registration Status : Success.
+- Customer with phone number 41 ------->Registration Status : Success.
+- Starting CustomerProcessingApplicationTests on MCKD-TRNG60-46 with PID 10628 (started by comviva in D:\customer\Customer-Data-Processing-and-report-generator-java-config-)
+- No active profile set, falling back to default profiles: default
+- Started CustomerProcessingApplicationTests in 1.673 seconds (JVM running for 2.715)
+- Customer with phone number 0 ------->Registration Status : Success.
+- Customer with phone number 1 ------->Registration Status : Success.
+- Customer with phone number 2 ------->Registration Status : Success.
+- Customer with phone number 3 ------->Registration Status : Success.
+- Customer with phone number 4 ------->Registration Status : Success.
+- Customer with phone number 5 ------->Registration Status : Success.
+- Customer with phone number 6 ------->Registration Status : Success.
+- Customer with phone number 7 ------->Registration Status : Success.
+- Customer with phone number 8 ------->Registration Status : Success.
+- Customer with phone number 30 ------->Registration Status : Success.
+- Customer with phone number 41 ------->Registration Status : Success.
+- Customer with phone number 0 ------->Registration Status : Failed.
+- Customer with phone number 1 ------->Registration Status : Failed.
+- Customer with phone number 2 ------->Registration Status : Failed.
+- Customer with phone number 3 ------->Registration Status : Failed.
+- Customer with phone number 4 ------->Registration Status : Failed.
+- Customer with phone number 5 ------->Registration Status : Failed.
+- Customer with phone number 6 ------->Registration Status : Failed.
+- Customer with phone number 7 ------->Registration Status : Failed.
+- Customer with phone number 8 ------->Registration Status : Failed.
+- Customer with phone number 30 ------->Registration Status : Failed.
+- Customer with phone number 41 ------->Registration Status : Failed.
